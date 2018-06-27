@@ -46,7 +46,7 @@ namespace {
 	endcap_m[gainId] = new TH1F(Form("EEm%i", gainId), Form("mean %i EE", gainValues[gainId]), 100, 150., 250.);
 	barrel_r[gainId] = new TH1F(Form("EBr%i", gainId), Form("rms %i EB",  gainValues[gainId]), 100, bmin[gainId], bmax[gainId]);
 	endcap_r[gainId] = new TH1F(Form("EEr%i", gainId), Form("rms %i EE",  gainValues[gainId]), 100, emin[gainId], emax[gainId]);
-     }
+      }
       auto iov = iovs.front();
       std::shared_ptr<EcalPedestals> payload = fetchPayload( std::get<1>(iov) );
       unsigned int run = std::get<0>(iov);
